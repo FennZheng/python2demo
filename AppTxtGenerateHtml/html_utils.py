@@ -26,7 +26,7 @@ class HtmlUtils(object):
                           '<meta http-equiv="Expires" content="0"/>',
                           '<meta http-equiv="X-UA-Compatible" content="IE=9">',
                           '<!DOCTYPE html>',
-                          '<html><head><title>斯凯网络应用库信息</title></head>',
+                          '<html><head><title>应用库信息</title></head>',
                           '<!-- CSS goes in the document HEAD or added to your external stylesheet -->',
                           '<style type="text/css">',
                           'table.imagetable {',

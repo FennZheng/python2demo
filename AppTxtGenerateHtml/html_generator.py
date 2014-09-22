@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# main py
+"""
+根据App的信息，生成分页的html
+"""
 __author__ = 'vernonzheng'
 
 from html_utils import *

@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 根据App的信息，生成分页的html
+generate pageable html by txt:
+(1)txt generated from spider or db client
+(2)in txt:use ';split;' as columns separator and use '/r/n' as row(item) separator
+(3)test: run html_generator_main.py and open either html in html_export/*
 """
 __author__ = 'vernonzheng'
 

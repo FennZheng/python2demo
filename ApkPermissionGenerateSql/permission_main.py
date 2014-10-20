@@ -45,14 +45,17 @@ def read_permission_txt():
 #根据excel复制出的txt，分隔符为/t
 #生成权限meta元数据
 def read_permission_meta_txt():
-    sql = "insert into mkt_app_permission_meta values(%s,'%s','','');"
+    sql = "insert into mkt_app_permission_meta values(%s,'%s','%s','');"
     with open('permission_meta.txt', 'r') as f:
         with open('permission_meta.sql', 'w') as sql_f:
             for line in f.readlines():
                 if str(line).strip() == '':
                     break
                 items = str(line).split('\t')
-                sql_f.write(sql % (items[0], items[1]) + "\r")
+                sql_f.write(sql % (items[0], str(items[2]).replace('android.permission.', '')
+                                   .replace('com.android.browser.permission.', '')
+                                   .replace('com.android.launcher.permission.', '')
+                                   .replace('com.android.alarm.permission.', '').strip(), items[1]) + "\r")
 
 
 #根据excel复制出的txt，分隔符为/t
